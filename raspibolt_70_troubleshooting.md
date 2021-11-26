@@ -3,6 +3,8 @@ layout: default
 title: Troubleshooting
 nav_order: 80
 ---
+{% include_relative include_deprecated-notice.md %}
+
 # Troubleshooting
 {: .no_toc }
 

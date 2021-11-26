@@ -4,6 +4,7 @@ title: Block Explorer
 nav_order: 55
 ---
 <!-- markdownlint-disable MD014 MD022 MD025 MD033 MD036 MD040 -->
+{% include_relative include_deprecated-notice.md %}
 
 # Block Explorer
 {: .no_toc }

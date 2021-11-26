@@ -4,6 +4,7 @@ title: Electrum
 nav_order: 50
 ---
 <!-- markdownlint-disable MD014 MD022 MD025 MD033 MD040 -->
+{% include_relative include_deprecated-notice.md %}
 
 # Electrum
 {: .no_toc }
@@ -506,7 +507,7 @@ Updating a [new release](https://github.com/romanz/electrs/releases){:target="_b
   $ echo "Available = ${electrsgit}"
   ```
 
-* If the available version is newer, then you can proceed with the following 
+* If the available version is newer, then you can proceed with the following
 
   ```sh
   $ # backup the current one

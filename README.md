@@ -1,4 +1,4 @@
 ### The RaspiBolt Guide is now available on GitHub Pages:
-https://raspibolt.github.io/raspibolt/
+https://raspibolt.org
 
-This repository contains all sources and is used for Issue tracking.
+This repository contains the archived version 2, which is deprecated.

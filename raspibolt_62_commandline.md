@@ -5,11 +5,13 @@ parent: Bonus Section
 nav_order: 80
 has_toc: false
 ---
-## Bonus guide: Pimp the command line  
+{% include_relative include_deprecated-notice.md %}
+
+## Bonus guide: Pimp the command line
 *Difficulty: easy*
 
 ### Command prompt
-You can prettify your command prompt for each user by enabling color output and setting a custom prompt. 
+You can prettify your command prompt for each user by enabling color output and setting a custom prompt.
 
 * Open and edit `.bashrc`  as shown below, save and exit
   `$ nano /home/admin/.bashrc`
@@ -27,7 +29,7 @@ alias ls='ls -la --color=always'
 
 ![Pimp prompt](images/60_pimp_prompt.png)
 
-* Reload configuration  
+* Reload configuration
   `source /home/admin/.bashrc`
 
 ![Pimped prompt](images/60_pimp_prompt_result.png)
@@ -37,7 +39,7 @@ As user “admin”, install bash completion scripts for Bitcoin Core and all Li
 
 ```sh
 $ cd /home/admin/download
-$ wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/contrib/bitcoin-cli.bash-completion 
+$ wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/contrib/bitcoin-cli.bash-completion
 $ wget https://raw.githubusercontent.com/lightningnetwork/lnd/master/contrib/lncli.bash-completion
 $ sudo cp *.bash-completion /etc/bash_completion.d/
 ```
@@ -46,4 +48,4 @@ Bash completion will be enabled after your next login.
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md) 
+<< Back: [Bonus guides](raspibolt_60_bonus.md)

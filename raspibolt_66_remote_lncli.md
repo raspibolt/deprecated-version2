@@ -5,6 +5,8 @@ parent: Bonus Section
 nav_order: 90
 has_toc: false
 ---
+{% include_relative include_deprecated-notice.md %}
+
 ## Bonus guide: Use `lncli` on a different computer
 
 *Difficulty: easy*
@@ -25,7 +27,7 @@ root@RaspiBolt:/home/admin#  ufw allow from 192.168.0.0/24 to any port  10009 co
 root@RaspiBolt:/home/admin#  ufw status
 root@RaspiBolt:/home/admin#  exit
 ```
-- Add one new line in the [Application Options] section of lnd.conf to allow rpc from more than just the default localhost  
+- Add one new line in the [Application Options] section of lnd.conf to allow rpc from more than just the default localhost
   `admin ~  ฿  sudo nano /home/bitcoin/.lnd/lnd.conf`
 
 ```ini
@@ -33,7 +35,7 @@ root@RaspiBolt:/home/admin#  exit
 rpclisten=0.0.0.0:10009
 ```
 
-- Temporarily allow admin.macaroon to be copied  
+- Temporarily allow admin.macaroon to be copied
   `admin ~  ฿ sudo chmod 777 /home/bitcoin/.lnd/admin.macaroon`
 
 ## Windows PC
@@ -43,10 +45,10 @@ rpclisten=0.0.0.0:10009
 - Download the file for your OS. For Windows10 it will generally be lnd-windows-amd64-vx.x.x.zip
 
 - Open the compressed file and extract the lncli application (e.g. lncli.exe) to your desktop.
-  ![Zip File](images/60_remote_zip.png) 
+  ![Zip File](images/60_remote_zip.png)
 
-- Open a CMD window  
-  `Press Win+R, enter cmd, then press Enter` 
+- Open a CMD window
+  `Press Win+R, enter cmd, then press Enter`
 
 
 - Change to the directory where you saved lncli.exe, and view the help information
@@ -68,17 +70,17 @@ GLOBAL OPTIONS:
 ```
 - Take note of the default (base) directory
 
-- Make the necessary default directory  
+- Make the necessary default directory
   `> mkdir %LOCALAPPDATA%\Lnd`
 * Follow the instructions in  [ [Mainnet](raspibolt_50_mainnet.md) ]  to use WinSCP to copy the files shown
   * Local:  `\Users\xxxx\AppData\Local\Lnd`
   * Remote: `/home/bitcoin/.lnd/`
   * Files: `See below`
 
- ![Files to Copy](images/60_winLND.png) 
+ ![Files to Copy](images/60_winLND.png)
 
 
- - Back on the RaspiBolt: Reset admin.macaroon permissions  
+ - Back on the RaspiBolt: Reset admin.macaroon permissions
    `admin ~  ฿ sudo chmod 600 /home/bitcoin/.lnd/admin.macaroon`
 
 
@@ -150,4 +152,4 @@ The table below shows which commands are permitted by each macaroon
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md) 
+<< Back: [Bonus guides](raspibolt_60_bonus.md)

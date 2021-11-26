@@ -4,6 +4,8 @@ title: Security
 nav_order: 21
 ---
 <!-- markdownlint-disable MD014 MD022 MD025 MD033 MD040 -->
+{% include_relative include_deprecated-notice.md %}
+
 # Security
 {: .no_toc }
 
@@ -53,7 +55,7 @@ Follow this guide [Configure “No Password SSH Keys Authentication” with PuTT
 
   When you're prompted to "Enter a file in which to save the key," press Enter to use the default file location. Optionally, for maximum security, use `password [A]` to protect your key.
 
-* The public key now needs to be copied to the Pi. 
+* The public key now needs to be copied to the Pi.
   We use the command `ssh-copy-id`, which copies your public key to the remote machine (and creates files and directories, if needed).
   You will be prompted for your password once.
 

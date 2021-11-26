@@ -5,6 +5,8 @@ parent: Bonus Section
 nav_order: 130
 has_toc: false
 ---
+{% include_relative include_deprecated-notice.md %}
+
 ## Bonus Guide: Upgrade External Drive
 
 *Difficulty: intermediate*
@@ -132,14 +134,14 @@ We will now check if your drive works well as-is, or if additional configuration
   $ lsblk -o NAME,MOUNTPOINT,UUID,FSTYPE,SIZE,LABEL,MODEL
   > NAME        MOUNTPOINT UUID                                 FSTYPE   SIZE LABEL  MODEL
   > sda                                                                931.5G        BUP_Slim_RD
-  > └─sda1      /mnt/ext   3aab0952-3ed4-4652-b203-d994c4fdff20 ext4   931.5G        
+  > └─sda1      /mnt/ext   3aab0952-3ed4-4652-b203-d994c4fdff20 ext4   931.5G
   > sdb                                                                953.9G        SABRENT
-  > mmcblk0                                                               58G        
-  > ├─mmcblk0p1 /boot      4BBD-D3E7                            vfat     256M boot   
-  > └─mmcblk0p2 /          45e99191-771b-4e12-a526-0779148892cb ext4    57.8G rootfs 
+  > mmcblk0                                                               58G
+  > ├─mmcblk0p1 /boot      4BBD-D3E7                            vfat     256M boot
+  > └─mmcblk0p2 /          45e99191-771b-4e12-a526-0779148892cb ext4    57.8G rootfs
   ```
 
-* In the above, the original external drive is `sda` and has partition `sda1`.  
+* In the above, the original external drive is `sda` and has partition `sda1`.
   The newly attached external drive is `sdb` and has no partition yet.
   It's very important to keep track of which block device and partition applies to the original vs new drive
 
@@ -211,12 +213,12 @@ We will now check if your drive works well as-is, or if additional configuration
   $ lsblk -o NAME,MOUNTPOINT,UUID,FSTYPE,SIZE,LABEL,MODEL
   > NAME        MOUNTPOINT UUID                                 FSTYPE   SIZE LABEL  MODEL
   > sda                                                                931.5G        BUP_Slim_RD
-  > └─sda1      /mnt/ext   3aab0952-3ed4-4652-b203-d994c4fdff20 ext4   931.5G        
+  > └─sda1      /mnt/ext   3aab0952-3ed4-4652-b203-d994c4fdff20 ext4   931.5G
   > sdb                                                                953.9G        SABRENT
-  > └─sdb1                 1d9e9dee-87c3-4296-94e2-e833b948a19d ext4   953.9G        
-  > mmcblk0                                                               58G        
-  > ├─mmcblk0p1 /boot      4BBD-D3E7                            vfat     256M boot   
-  > └─mmcblk0p2 /          45e99191-771b-4e12-a526-0779148892cb ext4    57.8G rootfs 
+  > └─sdb1                 1d9e9dee-87c3-4296-94e2-e833b948a19d ext4   953.9G
+  > mmcblk0                                                               58G
+  > ├─mmcblk0p1 /boot      4BBD-D3E7                            vfat     256M boot
+  > └─mmcblk0p2 /          45e99191-771b-4e12-a526-0779148892cb ext4    57.8G rootfs
   ```
 
 * Edit the `fstab` file and add the following as a new line at the end, replacing `123456` with your own `UUID`.
@@ -293,7 +295,7 @@ We'll use rsync to copy the files, preserving permissions and extended attribute
 
   ```sh
   $ cd /
-  $ sudo rsync -avxHAX --exclude=swapfile --numeric-ids --info=progress2 mnt/ext/ mnt/extnew/ 
+  $ sudo rsync -avxHAX --exclude=swapfile --numeric-ids --info=progress2 mnt/ext/ mnt/extnew/
   ```
 
   The output will show file progression
@@ -321,7 +323,7 @@ We'll use rsync to copy the files, preserving permissions and extended attribute
   2. overall percentage complete
   3. transfer speed
   4. time remaining (e.g. 1:04:17) and then changed to time taken (0:00:25)
-  5. xfr is the file number transferred 
+  5. xfr is the file number transferred
   6. ir-chk=4324/4334 is the incremental recursion check.  files remaining / files total
 
   Over the course of the synchronization, the incremental recursion check can increase until it transitions
@@ -349,7 +351,7 @@ We'll use rsync to copy the files, preserving permissions and extended attribute
   ```sh
   > lost+found/
   > 426,795,633,281 100%   54.07MB/s    2:05:28 (xfr#20717, to-chk=0/20739)
-  > 
+  >
   > sent 426,901,227,575 bytes  received 393,910 bytes  56,674,626.15 bytes/sec
   > total size is 426,795,633,281  speedup is 1.00
   ```
@@ -533,8 +535,8 @@ Now that the new drive contains all the old files, we will remount it in place o
 
   ```sh
   $ lncli unlock
-  > Input wallet password: 
-  > 
+  > Input wallet password:
+  >
   > lnd successfully unlocked!
   ```
 

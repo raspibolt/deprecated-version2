@@ -5,6 +5,8 @@ parent: Bonus Section
 nav_order: 76
 has_toc: false
 ---
+{% include_relative include_deprecated-notice.md %}
+
 ## Bonus guide: Odroid XU Setup Guide
 *Difficulty: medium*
 

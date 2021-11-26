@@ -5,6 +5,8 @@ parent: Bonus Section
 nav_order: 130
 has_toc: false
 ---
+{% include_relative include_deprecated-notice.md %}
+
 ## Bonus guide: Specter Desktop
 
 *Difficulty: medium*
@@ -397,7 +399,7 @@ With this option, Specter is installed ***only*** on the user's laptop/computer 
   - Specter only needs to be setup and maintained in one place
 
 **Disadvantages**
-  - The Bitcoin RPC port must be made available outside of the Raspberry Pi's internal `localhost` network. It must first be made available to the local LAN network, and then optionally to the wider web via port forwarding if the user wishes to use Specter outside the local LAN network. 
+  - The Bitcoin RPC port must be made available outside of the Raspberry Pi's internal `localhost` network. It must first be made available to the local LAN network, and then optionally to the wider web via port forwarding if the user wishes to use Specter outside the local LAN network.
 
     This comes with its own security considerations that the user should be wary of.
 

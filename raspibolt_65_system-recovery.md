@@ -5,6 +5,8 @@ parent: Bonus Section
 nav_order: 110
 has_toc: false
 ---
+{% include_relative include_deprecated-notice.md %}
+
 ## Bonus guide: System recovery
 
 *Difficulty: easy*

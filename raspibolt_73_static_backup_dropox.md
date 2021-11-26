@@ -5,6 +5,8 @@ parent: Bonus Section
 nav_order: 45
 has_toc: false
 ---
+{% include_relative include_deprecated-notice.md %}
+
 ## Bonus guide: Automatic backup of static.channel to your Dropbox
 *Difficulty: easy*
 
@@ -12,13 +14,13 @@ Since lnd V0.6, Static Channel Backups (SCB) is supported. In a nutshell, every 
 This guide explains one way to automatically upload the channels.backup file on changes, to your Dropbox
 The following scripts were created by [Vindard](https://github.com/vindard)
 
-#### *Risk : Minimal* 
+#### *Risk : Minimal*
 The channel.backup file is encrypted so that it is safe to transmit over the Internet and to store on (e.g.) a cloud server.
 
 #### *Requirements: lnd version higher than 0.6*
 
 ### Setup Dropbox API Key
-    
+
 In your web browser, do the following:
 
 1. Go to https://www.dropbox.com/developers/apps/create and sign in
@@ -77,14 +79,14 @@ Run at boot
 
 `$ sudo systemctl enable backup-channels`
 
-### Test 
-You will now cause the channel.backup to change and see if the copy gets uploaded to your webserver.  
+### Test
+You will now cause the channel.backup to change and see if the copy gets uploaded to your webserver.
 
-`$ sudo touch /home/bitcoin/.lnd/data/chain/bitcoin/mainnet/channel.backup`  
+`$ sudo touch /home/bitcoin/.lnd/data/chain/bitcoin/mainnet/channel.backup`
 
-Logon to your dropbox and see if you have a new file.  
+Logon to your dropbox and see if you have a new file.
 
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md) 
+<< Back: [Bonus guides](raspibolt_60_bonus.md)
 

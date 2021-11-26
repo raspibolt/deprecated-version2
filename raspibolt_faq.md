@@ -3,6 +3,8 @@ layout: default
 title: FAQ
 nav_order: 90
 ---
+{% include_relative include_deprecated-notice.md %}
+
 # Frequently Asked Questions
 {: .no_toc }
 
@@ -183,7 +185,7 @@ $ electrsgit=$(curl -s https://api.github.com/repos/romanz/electrs/tags | jq -r 
 $ echo "Available = ${electrsgit}"
 ```
 
-If the available version is newer, then you can proceed with the following 
+If the available version is newer, then you can proceed with the following
 
 ```
 $ # backup the current one

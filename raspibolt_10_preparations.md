@@ -4,6 +4,8 @@ title: Preparations
 nav_order: 10
 ---
 <!-- markdownlint-disable MD014 MD022 MD025 MD040 -->
+{% include_relative include_deprecated-notice.md %}
+
 # Preparations
 {: .no_toc }
 

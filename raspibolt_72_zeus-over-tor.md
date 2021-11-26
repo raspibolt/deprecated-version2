@@ -5,10 +5,12 @@ parent: Bonus Section
 nav_order: 30
 has_toc: false
 ---
+{% include_relative include_deprecated-notice.md %}
+
 ## Bonus guide: Connect Zeus App Over Tor
 *Difficulty: medium*
 
-Download the Zeus app, APKs available here: https://github.com/ZeusLN/zeus/releases, 
+Download the Zeus app, APKs available here: https://github.com/ZeusLN/zeus/releases,
 on F-Droid and Google Play.
 
 Log in to your RaspiBolt through ssh.
@@ -33,9 +35,9 @@ $ sudo cat /var/lib/tor/lnd_api/hostname
 z1234567890abc.onion
 ```
 
-Make sure Go is installed (should be v1.11 or higher):  
+Make sure Go is installed (should be v1.11 or higher):
 ```
-$ go version 
+$ go version
 ```
 If need to install Go, run these:
 
@@ -57,7 +59,7 @@ $ cd ~/download
 $ wget https://github.com/LN-Zap/lndconnect/releases/download/v0.1.0/lndconnect-linux-armv7-v0.1.0.tar.gz
 $ sudo tar -xvf lndconnect-linux-armv7-v0.1.0.tar.gz --strip=1 -C /usr/local/bin
 ```
-Switch to user `bitcoin` and generate the LND connect URI QR code (or String):  
+Switch to user `bitcoin` and generate the LND connect URI QR code (or String):
 It will be a big QR code so maximize your terminal window and use CTRL - to shrink the code further to fit the screen.
 Replace the `host` variable with the onion address previously generated.
 To generate QR Code:

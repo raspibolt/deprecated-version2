@@ -5,6 +5,8 @@ parent: Bonus Section
 nav_order: 85
 has_toc: false
 ---
+{% include_relative include_deprecated-notice.md %}
+
 ## Bonus guide: lntop: LNTOP terminal dashboard
 *Difficulty: easy*
 
@@ -27,5 +29,5 @@ $ lntop
 ```
 ------
 
-<< Back: [Bonus guides](raspibolt_60_bonus.md) 
+<< Back: [Bonus guides](raspibolt_60_bonus.md)
 
